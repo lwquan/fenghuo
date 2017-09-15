@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)/ -->
+<html lang="zh-CN">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="baidu-site-verification" content="hlwLEz4JoU">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>烽火-联系我们</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="/fav.ico" type="image/x-icon">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <!--[if !IE]-->
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <!--[endif]-->
+    <!--[if lt IE 9]>
+    <script type="text/javascript">window.location = "https://www.weijinsuo.com/resource/error/support.html"</script>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/wow.min.js"></script>
+
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-static-top wow fadeInDown" data-wow-duration="1s" data-wow-delay="0s" style="visibility: visible;-webkit-animation-duration: 1s; -moz-animation-duration: 1s; animation-duration: 1s;-webkit-animation-delay: 0s; -moz-animation-delay: 0s; animation-delay: 0s">
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html" title=""><img alt="烽火网站建设" src="images/huudon_logo1.png"></a>
+                <ul class="nav-top">
+                    <li>
+                        <a href="">高端建站</a><i>|</i>
+                    </li>
+                    <li>
+                        <a href="">微信开发</a><i>|</i>
+                    </li>
+                    <li>
+                        <a href="" target="_blank">APP开发</a>
+                    </li>
+                    <li><i class="icon_s1"></i><span>全国服务热线&nbsp;&nbsp;<span class="ff-ar ft-13">020-8255039</span></span>
+                    </li>
+                </ul>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse" aria-expanded="true">
+                <ul class="nav-top hidden-lg hidden-xs">
+                    <li><span class="">服务热线&nbsp;&nbsp;<span class="ff-ar ft-13">0592-5218501</span></span>
+                    </li>
+                    <li>
+                        <a href="http://www.huudon.net/" target="_blank">FLASH站</a>
+                    </li>
+                    <li>
+                        <a href="/Contact">厦门</a>
+                        <a href="/Contact">泉州</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li>
+                            <a href="success.html" class="trans-3">精品案例</a>
+                        </li>
+                        <li>
+                            <a href="jianshe.html" class="trans-3">网站建设</a>
+                        </li>
+                        <li>
+                            <a href="wechat.html" class="trans-3">微信开发</a>
+                        </li>
+                        <li>
+                            <a href="app.html" class="trans-3">app开发</a>
+                        </li>
+                        <li>
+                            <a href="news_list.html" class="trans-3">新闻中心</a>
+                        </li>
+                        <li>
+                            <a href="" class="trans-3">网易邮箱</a>
+                        </li>
+                        <li>
+                            <a href="about_us.html" class="trans-3">关于锋火</a>
+                        </li>
+                        <li class="active">
+                            <a href="contact_us.html" class="trans-3">联系我们</a>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!--banner背景图-->
+<div class="green-banner contact-banner">
+    <div class="news-container">
+        <div class="top-title animated fadeInUp">
+            <h1>您能给我们多少信任 我们就能给你多大惊喜</h1>
+            <span>WE CAN GIVE YOU MUCH CREDIT FOR HOW MUCH YOU CAN GIVE US</span>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $('div .animated').css('display','none');
+        var aArr=[];
+        function animation(){
+            for(var i=0;i<aArr.length;i++){
+                var ele=aArr[i]
+                if($(ele).offset().top+100<$(window).height() + $(window).scrollTop()){
+                    $(ele).find('.animated').css('display','block');
+                    $(ele).addClass('fadeInUp');
+                }
+            }
+        }
+        aArr.push('.green-banner','.public-tabs','.content-map','.join-title');
+//        $('.news-list>ul>li').each(function (i) {
+//            $(this).find('a').addClass('animated fadeInUp');
+//            $(this).find('.date').addClass('animated tada');
+//            $(this).find('h4').addClass('animated fadeInLeft');
+//            $(this).find('p').addClass('animated fadeInUp');
+//            aArr.push('.news-list>ul>li:nth-child('+(i+1)+')');
+//        });
+        $('.join-list li').each(function (i) {
+            $(this).addClass('animated');
+            $(this).css('display','flex');
+            $(this).css('opacity','0');
+            aArr.push('.join-list li:nth-child('+(i+1)+')');
+        });
+        $(window).scroll(function() {
+            animation();
+        });
+        animation();
+    })
+</script>
+<!--banner背景图结束-->
+
+<!--内容开始-->
+<div class="news-content contact-container">
+    <div class="public-tabs contact-tabs">
+        <div class="news-container animated bounceInLeft delay0">
+            <ul class="clearfix">
+                <li class="active"><a href="JavaScript:;">广州总部</a></li>
+                <li><a href="javascript:;">深圳分部</a></li>
+                <li><a href="javascript:;">东莞分部</a></li>
+                <li><a href="javascript:;">中山分部</a></li>
+                <li><a href="javascript:;">佛山分部</a></li>
+                <li><a href="javascript:;">顺德分部</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="contact-content">
+        <div class="content-map">
+            <img class="animated bounceIn" src="images/fh_map.jpg" alt="">
+            <div class="content-row">
+                <div class="contact-logo animated bounceInLeft delay1">
+                    <img src="images/contact_logo.png" alt="">
+                </div>
+                <div class="contact-info animated bounceInLeft delay2">
+                    <p>公司地址：广州市天河区中山大道中38号加悦大厦1103-1109室</p>
+                    <p>热线电话：020-825-25039</p>
+                    <p>公司传真：020-82582007</p>
+                    <p>招聘邮箱：hr@mailinfo.cn（附上简历，注明应聘职位和所在城市）</p>
+                </div>
+                <div class="qr-code animated bounceInLeft delay3">
+                    <div>
+                        <div class="s1">扫一扫</div>
+                        <div class="s2">关注微信公众号</div>
+                    </div>
+                    <img src="images/qr_code.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="join-us">
+            <div class="join-title clearfix">
+                <div class="fl">
+                    <h2 class="animated bounceInLeft delay1">WELCOME</h2>
+                    <h3 class="animated bounceInLeft delay2">JOIN THE FRONTAL FIRE TEAM</h3>
+                </div>
+                <div class="fr">
+                    <img class="animated bounceInRight delay3" src="images/join_text.png" alt="">
+                    <p class="animated bounceInRight delay4">如有意者，请将简历和作品投入对应的邮箱</p>
+                </div>
+            </div>
+            <div class="join-list">
+                <ul class="clearfix">
+                    <li>
+                        <div class="jl1 animated slideInLeft">
+                            <h3>网页设计师</h3>
+                            <h4>WEB DESIGNER</h4>
+                        </div>
+                        <div class="jl2 animated fadeInDown">
+                            <p>1、能独立构建完整的网页框架和设计细节，有创意及品味，有较强视觉创作能力,色彩把握能力；</p>
+                            <p>2、精通网页设计和平面设计的相关软件，如Photoshop、Illustrator等；</p>
+                            <p>3、具有良好的人际沟通和表达，能与各个岗位的人员良好配合，能适应较强的工作压力；</p>
+                            <p>4、强烈的工作责任心和团队合作精神，对待新知识要去发掘和学习，掌握时代潮流变化。</p>
+                        </div>
+                        <div class="jl3">
+                            <img class="animated bounceIn" src="images/join_1.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="jl1 animated slideInLeft">
+                            <h3>前端工程师</h3>
+                            <h4>FRONT END ENGINEER</h4>
+                        </div>
+                        <div class="jl2 animated fadeInDown">
+                            <p>1、做页面，精通HTML、CSS；熟悉W3C标准；能够解决常见兼容性问题；熟悉HTML5、CSS3开发。</p>
+                            <p>2、熟悉Web交互式设计，对用户体验、交互操作流程、及用户需求有较深入理解；</p>
+                            <p>3、精通JavaScript语言，熟悉并能熟练使用Javascript开发框架和函数库，了解面向对象编程方法.</p>
+                            <p>4、强烈的工作责任心和团队合作精神，对待新知识要去发掘和学习，掌握时代潮流变化。</p>
+                        </div>
+                        <div class="jl3">
+                            <img class="animated bounceIn" src="images/join_2.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="jl1 animated slideInLeft">
+                            <h3>PHP程序员</h3>
+                            <h4>PHP PROGRAMMERS</h4>
+                        </div>
+                        <div class="jl2 animated fadeInDown">
+                            <p>1、3年以上Web开发经验。</p>
+                            <p>2、精通PHP开发，熟悉thinkphp的MVC开发模式及OOP开发思想，有大型网站的成功开发经验优先。</p>
+                            <p>3、有DedeCms、ecshop 等或相关项目的二次开发经验者优先考虑。</p>
+                            <p>4、有HTML5，微信公众平台接口开发经验，能独立完成针对微信公众服务号的各类型项目开发设计优先考虑。</p>
+                        </div>
+                        <div class="jl3">
+                            <img class="animated bounceIn" src="images/join_3.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="jl1 animated slideInLeft">
+                            <h3>销售专员</h3>
+                            <h4>SALES SPECIALIST</h4>
+                        </div>
+                        <div class="jl2 animated fadeInDown">
+                            <p>1、男女不限，年龄18-28岁，大专及以上学历；</p>
+                            <p>2、性格活泼外向、具有良好的沟通能力、谈判能力及交际技巧；</p>
+                            <p>3、有责任心，能承受较大的工作压力，愿意挑战高薪；</p>
+                            <p>4、有销售经验更佳，欢迎优秀应届毕业生；</p>
+                        </div>
+                        <div class="jl3">
+                            <img class="animated bounceIn" src="images/join_4.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--内容结束-->
+
+<!--底部-->
+<div class="footer">
+    <div class="container">
+        <div class="url">
+
+            <ul class="clearfix">
+                <li><span>友情链接：</span></li>
+                <li><a href="">
+                    广州网站制作
+                </a></li>
+                <li><a href="">
+                    广州网站建设
+                </a></li>
+                <li><a href="">
+                    广州网站设计
+                </a></li>
+                <li><a href="">
+                    深圳网站制作
+                </a></li>
+                <li><a href="">
+                    深圳网站建设
+                </a></li>
+                <li><a href="">
+                    深圳网站设计
+                </a></li>
+                <li><a href="">
+                    东莞网站建设
+                </a></li>
+                <li><a href="">
+                    东莞网站设计
+                </a></li>
+                <li><a href="">
+                    佛山网站制作
+                </a></li>
+                <li><a href="">
+                    佛山网站建设
+                </a></li>
+                <li><a href="">
+                    佛山网站设计
+                </a></li>
+                <li><a href="">
+                    中山网站制作
+                </a></li>
+                <li><a href="">
+                    中山网站建设
+                </a></li>
+                <li><a href="">
+                    中山网站设计
+                </a></li>
+
+                <li><a href="">
+                    佛山网站设计
+                </a></li>
+
+            </ul>
+        </div>
+        <p class="text">
+            广东锋火信息科技有限公司 版权所有 锋火品牌建站 Copyright © 2017 All rights reserved [中华人民共和国增值电信业务经营许可证]   粤ICP备12040357号-11
+        </p>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function() {
+
+        if($(window).height() + $(window).scrollTop() > $(".about").offset().top) {
+            $(".about .main-fl").css("display", "block")
+            $(".about .main-fr").css("display", "block")
+        }
+        $(window).scroll(function() {
+            if($(window).height() + $(window).scrollTop() > $(".about").offset().top+200 ) {
+                $(".about .main-fl").css("display", "block")
+                $(".about .main-fr").css("display", "block")
+            }
+
+        })
+    })
+</script>
+<!--底部结束-->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/index.js"></script>
+<script type="text/javascript">
+    $(function() {
+        new WOW().init();
+
+        $(".imgbox").hover(function() {
+            $(this).find("img").eq(0).addClass("scale-1x")
+        }, function() {
+            $(this).find("img").eq(0).removeClass("scale-1x")
+        })
+    })
+</script>
+</body>
+
+</html>

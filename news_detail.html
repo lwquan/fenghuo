@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)/ -->
+<html lang="zh-CN">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="baidu-site-verification" content="hlwLEz4JoU">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>烽火-新闻详情</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="/fav.ico" type="image/x-icon">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <!--[if !IE]-->
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <!--[endif]-->
+    <!--[if lt IE 9]>
+    <script type="text/javascript">window.location = "https://www.weijinsuo.com/resource/error/support.html"</script>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/wow.min.js"></script>
+
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-static-top wow fadeInDown" data-wow-duration="1s" data-wow-delay="0s" style="visibility: visible;-webkit-animation-duration: 1s; -moz-animation-duration: 1s; animation-duration: 1s;-webkit-animation-delay: 0s; -moz-animation-delay: 0s; animation-delay: 0s">
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html" title=""><img alt="烽火网站建设" src="images/huudon_logo1.png"></a>
+                <ul class="nav-top">
+                    <li>
+                        <a href="">高端建站</a><i>|</i>
+                    </li>
+                    <li>
+                        <a href="">微信开发</a><i>|</i>
+                    </li>
+                    <li>
+                        <a href="" target="_blank">APP开发</a>
+                    </li>
+                    <li><i class="icon_s1"></i><span>全国服务热线&nbsp;&nbsp;<span class="ff-ar ft-13">020-8255039</span></span>
+                    </li>
+                </ul>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse" aria-expanded="true">
+                <ul class="nav-top hidden-lg hidden-xs">
+                    <li><span class="">服务热线&nbsp;&nbsp;<span class="ff-ar ft-13">0592-5218501</span></span>
+                    </li>
+                    <li>
+                        <a href="http://www.huudon.net/" target="_blank">FLASH站</a>
+                    </li>
+                    <li>
+                        <a href="/Contact">厦门</a>
+                        <a href="/Contact">泉州</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li>
+                            <a href="success.html" class="trans-3">精品案例</a>
+                        </li>
+                        <li>
+                            <a href="jianshe.html" class="trans-3">网站建设</a>
+                        </li>
+                        <li>
+                            <a href="wechat.html" class="trans-3">微信开发</a>
+                        </li>
+                        <li>
+                            <a href="app.html" class="trans-3">app开发</a>
+                        </li>
+                        <li class="active">
+                            <a href="news_list.html" class="trans-3">新闻中心</a>
+                        </li>
+                        <li>
+                            <a href="" class="trans-3">网易邮箱</a>
+                        </li>
+                        <li>
+                            <a href="about_us.html" class="trans-3">关于锋火</a>
+                        </li>
+                        <li>
+                            <a href="contact_us.html" class="trans-3">联系我们</a>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!--banner背景图-->
+<div class="green-banner">
+    <div class="news-container">
+        <div class="top-title animated fadeInUp">
+            <h1>我们追求 <br> 极致的用户体验</h1>
+            <span>WE PURSUE PERFECT USER EXPERIENCE</span>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $('div .animated').css('display','none');
+        var aArr=[];
+        function animation(){
+            for(var i=0;i<aArr.length;i++){
+                var ele=aArr[i]
+                if($(ele).offset().top+100<$(window).height() + $(window).scrollTop()){
+                    $(ele).find('.animated').css('display','block');
+                    $(ele).addClass('fadeInUp');
+                }
+            }
+        }
+        aArr.push('.green-banner','.public-tabs','.last-next');
+        $('.news-list>ul>li').each(function (i) {
+            $(this).find('a').addClass('animated fadeInUp');
+            $(this).find('.date').addClass('animated tada');
+            $(this).find('h4').addClass('animated fadeInLeft');
+            $(this).find('p').addClass('animated fadeInUp');
+            aArr.push('.news-list>ul>li:nth-child('+(i+1)+')');
+        });
+        $('.article-content>*').each(function (i) {
+            $(this).addClass('animated');
+            $(this).css('display','block');
+            $(this).css('opacity','0');
+            aArr.push('.article-content>*:nth-child('+(i+1)+')');
+        });
+        console.log(aArr);
+        $(window).scroll(function() {
+            animation();
+        });
+        animation();
+    })
+</script>
+<!--banner背景图结束-->
+
+<!--内容开始-->
+<div class="news-content">
+    <div class="public-tabs">
+        <div class="news-container animated bounceInLeft delay0">
+            <ul class="clearfix">
+                <li><a href="">全部</a></li>
+                <li class="active"><a href="">公司动态</a></li>
+                <li><a href="">行业快讯</a></li>
+                <li><a href="">签约动态</a></li>
+                <li><a href="">设计趋势</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="news-article">
+        <h1 class="animated fadeInUp">响应式网页图片库设计的九个注意事项</h1>
+        <div class="article-date animated fadeInUp">
+            <span>2017-08-29</span> &emsp;|&emsp;
+            <span>分类：行业资讯</span> &emsp;|&emsp;
+            <span>标签：网页设计</span> &emsp;
+            <span>广东锋火</span>
+        </div>
+        <div class="article-content">
+            <p>响应式设计 无疑是当前 网页设计 领域当中，不可忽略的必要组成部分。而响应式网页中的图片显示又是老生常谈的问题，许多争论集中在响应式网站的图片应当怎么展示。继续延伸开来，那么响应式网站中的图片库应当如何设计呢？</p>
+            <p>相比于单个图片，图库的展示无疑更加复杂，牵涉到的变量更多，所以实现起来也更加麻烦费神。接下来，我们来看看如果要设计响应式的图片库，有哪些值得注意的基本规则和技巧。</p>
+            <p><strong>1、轮播幻灯片：尽量隐藏导航</strong></p>
+            <p>在桌面端上导航的存在可能没什么，但是在移动端上查看的时候，导航还是尽量隐藏起来，需要的时候再显现。而诸如左右切换的按钮和标明浏览位置的圆点，最好是在光标移动上去之后再显示，这样的设计不仅可以避免用户分心，而且能避免内容和导航元素之间的冲突，降低整体设计的混乱感。</p>
+            <img src="images/news_article_1.jpg" alt="">
+            <p><strong>2、避免使用大量肖像类图片</strong></p>
+            <p>如果你设计的图片库是类似网格布局的话，你可能会尽量挑选和横向的图片，或者方形的图像。这样的设计在兼容桌面端设计的同时，还可以让用户在小屏幕上更好地查看。人像类的图片在手机上适合纵向屏幕上浏览，如果横过来的话，图片会显得特别小，浏览会相当不方便。横向是最佳的，如果不行的话，使用方形的图片会是很好的兼容性方案。一个响应式的图片库的设计需要考虑多种因素，请务必牢记用户的不同浏览场景。</p>
+            <p><strong>3、在移动端上支持手势操作</strong></p>
+            <p>触摸屏上使用收拾操作几乎是用户的本能了。所以，在设计 响应式图片 库的时候，滑动操作等手势操作赋予用户更多的权力，让体验更加逼真。在移动设备上使用箭头导航太过于乏味、老旧，手势交互更加自然也更符合真实的交互体验。</p>
+            <p><strong>4、在移动端上禁用lightbox效果</strong></p>
+            <p>Lightbox效果大概是桌面端网页上最常见的图片浏览模式，图片以弹出框的形式呈现出来，能随着屏幕尺寸和鼠标操作来缩放。在产品展示的页面当中，这种图片浏览模式的使用尤其广泛和频繁，但是在移动端上的时候，它可能会引起大量的用户体验上的问题：盖住其他的交互控件、无法退出、尺寸不合适等等。</p>
+            <img src="images/news_article_2.jpg" alt="">
+            <p><strong>5、让导航元素低调不招摇</strong></p>
+            <p>如果你使用幻灯片的形式来展现大量图片组成的图片库的时候，导航就显得尤为重要了。用户肯定不想在等待加载中耗费太多的时间，他们依然会按照自己的速度点击，翻页，进入，退出，保持，等等。所以，当你要使用导航元素的时候，一定要设计在让他们觉得不碍事的地方。不要让导航的小圆点盖在文本或者链接上，并且避免复杂的控制方式，这样会分散用户注意力，并让整个页面的设计都趋于复杂。可点击跳转的导航小圆点能让用户快速跳转到他们想要去的地方，提升效率，降低无谓的消耗。当然，不要弄的太复杂！平衡最重要！</p>
+            <p><strong>6、不要让图片和视频混淆</strong></p>
+            <p>通常情况下，不同类型的媒体混到一起没啥问题，但是用户肯定不想翻看图片的时候，突然发现下一张图片变成了视频，突如其来的声音和额外的流量消耗绝对是他们不愿意碰到的事情！将视频和图片分割开来，让他们知道接下来的会是什么东西，不要让意外发生。</p>
+        </div>
+        <div class="last-next clearfix">
+            <div class="last animated fadeInLeft">上一篇：<a href="">每个失心疯的老板，都曾逼新媒体部门学过杜蕾斯</a></div>
+            <div class="next animated fadeInRight">下一篇：<a href="">纸媒下滑、新媒体艰难、直播一片混战，来谈谈海外动荡的大内容时代</a></div>
+        </div>
+    </div>
+    <div class="news-list news-container">
+        <ul class="clearfix">
+            <li>
+                <a class="main-wrap" href="">
+                    <div class="img">
+                        <img src="images/news_img_1.jpg" alt="">
+                    </div>
+                    <div class="middle clearfix">
+                        <div class="date">
+                            <span class="day">24</span>
+                            <span class="y-m">2017-08</span>
+                        </div>
+                        <h4>响应式网站中的图片库设计须注意</h4>
+                    </div>
+                    <p>相比于单个图片，图库的展示无疑更加复杂，牵涉到的变量更多，所以实现起来也更加麻烦费神。接下来，深圳网站设计公司科慧设计和大家一起看看...</p>
+                </a>
+                <a class="know-more" href="">了解更多</a>
+            </li>
+            <li>
+                <a class="main-wrap" href="">
+                    <div class="img">
+                        <img src="images/news_img_2.jpg" alt="">
+                    </div>
+                    <div class="middle clearfix">
+                        <div class="date">
+                            <span class="day">24</span>
+                            <span class="y-m">2017-08</span>
+                        </div>
+                        <h4>响应式网站中的图片库设计须注意</h4>
+                    </div>
+                    <p>相比于单个图片，图库的展示无疑更加复杂，牵涉到的变量更多，所以实现起来也更加麻烦费神。接下来，深圳网站设计公司科慧设计和大家一起看看...</p>
+                </a>
+                <a class="know-more" href="">了解更多</a>
+            </li>
+            <li>
+                <a class="main-wrap" href="">
+                    <div class="img">
+                        <img src="images/news_img_3.jpg" alt="">
+                    </div>
+                    <div class="middle clearfix">
+                        <div class="date">
+                            <span class="day">24</span>
+                            <span class="y-m">2017-08</span>
+                        </div>
+                        <h4>响应式网站中的图片库设计须注意</h4>
+                    </div>
+                    <p>相比于单个图片，图库的展示无疑更加复杂，牵涉到的变量更多，所以实现起来也更加麻烦费神。接下来，深圳网站设计公司科慧设计和大家一起看看...</p>
+                </a>
+                <a class="know-more" href="">了解更多</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--内容结束-->
+
+<!--公司简介-->
+<div class="about">
+    <div class="main clearfix">
+        <div class="main-fl">
+            <div class="footer-logn">
+                <img src="images/footer_logn.jpg">
+            </div>
+            <p class="box">
+                您身边的网站建设专家
+            </p>
+            <p class="text">
+                公司自成立以来，一直专注于从事网站建设、高端企业邮箱服务，始终秉承“专业的服务，易用的产品”的经营理念，以“提供高品质的服务、满足客户的需求、携手共创双赢”为企业目标
+            </p>
+        </div>
+        <div class="main-fr">
+            <div class="gsIfy">
+                <ul class="clearfix">
+                    <li class="active"><a href="JavaScript:;">广州总部</a></li>
+                    <li><a href="javascript:;">深圳分部</a></li>
+                    <li><a href="javascript:;">东莞分部</a></li>
+                    <li><a href="javascript:;">中山分部</a></li>
+                    <li><a href="javascript:;">佛山分部</a></li>
+                    <li><a href="javascript:;">顺德分部</a></li>
+                </ul>
+            </div>
+            <div id="com-1" class="com-info active">
+                <strong class="phoneNum">
+                    020-82525039
+                </strong>
+                <ul>
+                    <li><i></i>公司传真：<span>020-82582007</span></li>
+                    <li><i style="background-image: url(images/icon_s2.jpg)"></i>公司网站：<span>www.gdfenghuo.com</span></li>
+                    <li><i style="background-image: url(images/icon_s3.jpg)"></i><span>公司地址：广州市天河区中山大道中38号加悦大厦1103-1109室</span></li>
+                </ul>
+                <div class="erweima">
+                    <img src="images/erweima.jpg">
+                </div>
+            </div>
+            <div id="com-2" class="com-info">
+                <strong class="phoneNum">
+                    020-82525039
+                </strong>
+                <ul>
+                    <li><i></i>公司传真：<span>020-82582007</span></li>
+                    <li><i style="background-image: url(images/icon_s2.jpg)"></i>公司网站：<span>www.gdfenghuo.com</span></li>
+                    <li><i style="background-image: url(images/icon_s3.jpg)"></i><span>公司地址：广州市天河区中山大道中38号加悦大厦1103-1109室</span></li>
+                </ul>
+                <div class="erweima">
+                    <img src="images/erweima.jpg">
+                </div>
+            </div>
+            <div id="com-3" class="com-info">
+                <strong class="phoneNum">
+                    020-82525039
+                </strong>
+                <ul>
+                    <li><i></i>公司传真：<span>020-82582007</span></li>
+                    <li><i style="background-image: url(images/icon_s2.jpg)"></i>公司网站：<span>www.gdfenghuo.com</span></li>
+                    <li><i style="background-image: url(images/icon_s3.jpg)"></i><span>公司地址：广州市天河区中山大道中38号加悦大厦1103-1109室</span></li>
+                </ul>
+                <div class="erweima">
+                    <img src="images/erweima.jpg">
+                </div>
+            </div>
+            <div id="com-4" class="com-info">
+                <strong class="phoneNum">
+                    020-82525039
+                </strong>
+                <ul>
+                    <li><i></i>公司传真：<span>020-82582007</span></li>
+                    <li><i style="background-image: url(images/icon_s2.jpg)"></i>公司网站：<span>www.gdfenghuo.com</span></li>
+                    <li><i style="background-image: url(images/icon_s3.jpg)"></i><span>公司地址：广州市天河区中山大道中38号加悦大厦1103-1109室</span></li>
+                </ul>
+                <div class="erweima">
+                    <img src="images/erweima.jpg">
+                </div>
+            </div>
+            <div id="com-5" class="com-info">
+                <strong class="phoneNum">
+                    020-82525039
+                </strong>
+                <ul>
+                    <li><i></i>公司传真：<span>020-82582007</span></li>
+                    <li><i style="background-image: url(images/icon_s2.jpg)"></i>公司网站：<span>www.gdfenghuo.com</span></li>
+                    <li><i style="background-image: url(images/icon_s3.jpg)"></i><span>公司地址：广州市天河区中山大道中38号加悦大厦1103-1109室</span></li>
+                </ul>
+                <div class="erweima">
+                    <img src="images/erweima.jpg">
+                </div>
+            </div>
+            <div id="com-6" class="com-info">
+                <strong class="phoneNum">
+                    020-82525039
+                </strong>
+                <ul>
+                    <li><i></i>公司传真：<span>020-82582007</span></li>
+                    <li><i style="background-image: url(images/icon_s2.jpg)"></i>公司网站：<span>www.gdfenghuo.com</span></li>
+                    <li><i style="background-image: url(images/icon_s3.jpg)"></i><span>公司地址：广州市天河区中山大道中38号加悦大厦1103-1109室</span></li>
+                </ul>
+                <div class="erweima">
+                    <img src="images/erweima.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--公司简介结束-->
+
+<!--底部-->
+<div class="footer">
+    <div class="container">
+        <div class="url">
+
+            <ul class="clearfix">
+                <li><span>友情链接：</span></li>
+                <li><a href="">
+                    广州网站制作
+                </a></li>
+                <li><a href="">
+                    广州网站建设
+                </a></li>
+                <li><a href="">
+                    广州网站设计
+                </a></li>
+                <li><a href="">
+                    深圳网站制作
+                </a></li>
+                <li><a href="">
+                    深圳网站建设
+                </a></li>
+                <li><a href="">
+                    深圳网站设计
+                </a></li>
+                <li><a href="">
+                    东莞网站建设
+                </a></li>
+                <li><a href="">
+                    东莞网站设计
+                </a></li>
+                <li><a href="">
+                    佛山网站制作
+                </a></li>
+                <li><a href="">
+                    佛山网站建设
+                </a></li>
+                <li><a href="">
+                    佛山网站设计
+                </a></li>
+                <li><a href="">
+                    中山网站制作
+                </a></li>
+                <li><a href="">
+                    中山网站建设
+                </a></li>
+                <li><a href="">
+                    中山网站设计
+                </a></li>
+
+                <li><a href="">
+                    佛山网站设计
+                </a></li>
+
+            </ul>
+        </div>
+        <p class="text">
+            广东锋火信息科技有限公司 版权所有 锋火品牌建站 Copyright © 2017 All rights reserved [中华人民共和国增值电信业务经营许可证]   粤ICP备12040357号-11
+        </p>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function() {
+//				公司tab切换开始
+        $('.gsIfy>ul>li').click(function () {
+            var i=$(this).index();
+            $(this).addClass('active').siblings().removeClass('active');
+            $('.com-info').css('display','none');
+            $('#com-'+(i+1)).fadeIn(500);
+        });
+//				公司tab切换结束
+        if($(window).height() + $(window).scrollTop() > $(".about").offset().top) {
+            $(".about .main-fl").css("display", "block")
+            $(".about .main-fr").css("display", "block")
+        }
+        $(window).scroll(function() {
+            console.log($(window).height() + $(window).scrollTop() + 'a')
+            console.log($(".about").offset().top + 'b')
+            if($(window).height() + $(window).scrollTop() > $(".about").offset().top+200 ) {
+                $(".about .main-fl").css("display", "block")
+                $(".about .main-fr").css("display", "block")
+            }
+
+        })
+    })
+</script>
+<!--底部结束-->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/index.js"></script>
+<script type="text/javascript">
+    $(function() {
+        new WOW().init();
+
+        $(".imgbox").hover(function() {
+            $(this).find("img").eq(0).addClass("scale-1x")
+        }, function() {
+            $(this).find("img").eq(0).removeClass("scale-1x")
+        })
+    })
+</script>
+</body>
+
+</html>
